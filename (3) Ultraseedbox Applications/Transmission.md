@@ -42,7 +42,7 @@ Deluge's config folder: `~/.config/transmission-daemon`
 
 In this guide, we'll be exploring options on how to limit your seeding torrent's ratio in Transmission. One where you will apply seeding limit to all of your torrents.
 
-#### Global Seeding Limit
+### Global Seeding Limit
 
 * Access Transmission's Settings
 * On Torrents -> Seeding, check **Stop seeding at ratio:** and enter 2. This will stop all torrents from seeding when it hits 2.0 ratio.
@@ -88,14 +88,14 @@ For Windows, you may have to install an additional program, otherwise upon conne
 
 Connecting to your Ultraseedbox Transmission is a relatively simple process.
 
-##### Creating a New Connection
+#### Creating a New Connection
 
 Upon your first launch, you should be greeted with a box to input your details, which are as follows:
 
 ```
-Remote host: username.lwxxx.usbx.me 
+Remote host: username.lwxxx.usbx.me
 Port: 443
-Use SSL: Ticked 
+Use SSL: Ticked
 Authentication required: Ticked
 Always Auto-Connect: Ticked
 Username: Found in your Ultraseedbox Control Panel
@@ -113,13 +113,13 @@ If you receive a popup regarding Geo IP, select yes as this will allow you to se
 
 ![](https://i.imgur.com/ECQQTJ7.png)
 
-##### Add your first .torrent file
+#### Add your first .torrent file
 
 To add a .torrent file to transmission via the remote first click Torrent in the top left of the small GUI, add a torrent. This will open your file explorer for you to add your .torrent file
 
 ![](https://i.imgur.com/ELxnXBP.png)
 
-##### Add your first Magnet Link
+#### Add your first Magnet Link
 
 Adding a magnet link is the same. However, instead of adding a torrent file, you choose Add torrent link and paste your link in the dialog box.
 

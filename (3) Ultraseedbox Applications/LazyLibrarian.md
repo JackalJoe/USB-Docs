@@ -7,13 +7,12 @@ assumes the following:
 
 -   You have Jackett installed for use with certain Providers
 
-## Initial Setup
 
 ## Securing your WebUI.
 
 Upon loading LazyLibrarian You will need to navigate to `Config` to list all the settings required to begin the use of LazyLibrarian, Your first step must be to go to interface > Access Control > Fill in desired Username and Password then click save. You will need to restart LazyLibrarianfrom your Control Panel, then upon starting you will need to login with your new details.
 
-![](https://i.imgur.com/6KXBn04.png)
+![](https://i.imgur.com/GENcvx2.png)
 
 
 ## Connecting your Download client

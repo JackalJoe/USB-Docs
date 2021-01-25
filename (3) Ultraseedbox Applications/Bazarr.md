@@ -36,7 +36,7 @@ We’ll be doing the following steps:
 * Then enable the subtitle providers that you wish to use click Providers on the left-hand side tick your required providers and click save to complete the providers' page
   * Some providers require you to add your credentials. Be sure to enter it accordingly
   * There are also some providers that needed an anti-captcha API key.
-   
+
 ![](https://i.imgur.com/RF67f3d.png)
 
 * Under languages on the left-hand side, click the drop-down box on enabled languages and select your preferred languages for Bazarr to search
@@ -114,7 +114,7 @@ Download Only Monitored: Enabled (Recommended)
 ![](https://i.imgur.com/laawLAE.png)
 
 * Then input the credentials that you want
-* Once that’s done, click **Save** 
+* Once that’s done, click **Save**
 * Wait for a few seconds and refresh. It’ll redirect directly to your login page. Login using your set credentials to proceed.
 
 ![](https://i.imgur.com/L8yFG4F.png)
@@ -141,9 +141,7 @@ Download Only Monitored: Enabled (Recommended)
   * Force Bazarr to download wanted subtitles by either
     * Going to Wanted and click **Search All** on Series or Movies
 
-![](https://i.imgur.com/5RMxDhM.png)
-
-![](https://i.imgur.com/4tgbeCy.png)
+![](https://i.imgur.com/ydPkiIi.png)
 
   * Go to **System -> Tasks** and click the following
     * Update all Episode Subtitles from disk

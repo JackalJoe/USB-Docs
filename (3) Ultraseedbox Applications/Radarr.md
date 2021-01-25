@@ -53,17 +53,14 @@ In this section, we'll be setting up Radarr. This guide assumes that this is you
 
 * After changing, save it by clicking **Save** in the top left-hand corner
 
-![](https://i.imgur.com/dsnd5g7.png)
 
 ### Adding Indexers
 
 * Go to Indexers
 
-![](https://i.imgur.com/yHjc7BU.png)
+![](https://i.imgur.com/vCRyBym.png)
 
 * Click the Plus button
-
-![](https://i.imgur.com/AKIQ5Fr.png)
 
 * Then select the indexers you want to add for your Radarr instance and input what is asked on each indexer you wish
   * Depending on the indexer, it'll ask for your account credentials or a passkey. Refer to your indexer/tracker for more information on what to put.
