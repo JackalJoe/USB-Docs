@@ -1,3 +1,8 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing any NZB client to download directly to (or worse try to download and unpack) on your cloud storage using Rclone Mount will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
+
 **SABnzbd** is an Open Source Binary Newsreader written in Python. SABnzbd makes Usenet as simple and streamlined as possible by automating everything we can. All you have to do is add an `.nzb`. SABnzbd takes over from there, where it will be automatically downloaded, verified, repaired, extracted and filed away with zero human interaction.
 
 Here are SAB's features:
@@ -36,7 +41,7 @@ To use SABnzbd, you may need the following:
 
 ### Initial Setup Wizard
 
-* Upon connecting, you'll be greeted by SABnzbd's setup wizard. 
+* Upon connecting, you'll be greeted by SABnzbd's setup wizard.
 * Select your preferred language.
   * This guide will be assuming you selected English, however feel free to choose any other language, you will just need to translate the guide.
 

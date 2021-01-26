@@ -1,3 +1,7 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing File Browser to share your cloud storage will create extreme strain on your slot's disk and could cause a 24 hour ban on accessing your cloud storage. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
 ## File Browser
 
 File browser provides a file managing interface within your home directory and it can be used to upload, delete, preview, rename and edit your files. All from within your web browser.

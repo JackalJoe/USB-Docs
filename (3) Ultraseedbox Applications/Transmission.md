@@ -1,3 +1,7 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing any torrent client to seed from your cloud storage using Rclone will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
 **Transmission** is a BitTorrent client which features a variety of user interfaces written in C/Objective-C. It is:
 
 * Open Source and volunteer-based

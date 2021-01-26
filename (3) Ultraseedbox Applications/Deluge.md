@@ -1,3 +1,7 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing any torrent client to seed from your cloud storage using Rclone will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
 **Deluge** is a full-featured BitTorrent application written in Python 2. It has a variety of features, including but not limited to:
 
 * Client/server model
@@ -128,7 +132,7 @@ Should you need to change your Deluge's *daemon password*, you may need to reins
 
 ![](https://docs.usbx.me/uploads/images/gallery/2019-11/2019-06-13_23h03_23%5B1%5D.png)
 
-* Now start your deluge instance by running `app-deluge start` 
+* Now start your deluge instance by running `app-deluge start`
 * Once started, enter `deluge` as your password.
 
 ![](https://docs.usbx.me/uploads/images/gallery/2019-11/2019-06-13_23h06_06%5B1%5D.png)

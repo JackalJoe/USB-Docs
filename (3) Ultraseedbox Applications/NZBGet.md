@@ -1,3 +1,7 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing any NZB client to download directly to (or worse try to download and unpack) on your cloud storage using Rclone Mount will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
 **NZBGet** is a binary downloader written in C++, which downloads files from Usenet based on the information given in nzb-files. It is designed with performance in mind to achieve maximum download speed by using very little system resources. Some of the features are:
 
 * Fast deobfuscation (par-rename)
@@ -19,7 +23,7 @@ In this section, we'll be setting up NZBGet for the first time. Here, we'll be d
 * Change ControlUsername and ControlPassword
 * Add Usenet indexers
 
-You may also need the following: 
+You may also need the following:
 
 * A Usenet service provider, you can find a list of different providers here: [https://www.reddit.com/r/usenet/wiki/providers](https://www.reddit.com/r/usenet/wiki/providers)
 * An indexer to obtain `.nzb` files, these are used to tell the server where to find the files
@@ -41,7 +45,7 @@ You may also need the following:
 ```
 Active: Yes
 Name: Chosen name for this server
-Host: my.newsserver.com (You can find the host for your provider either in the email given to you when you signed up or your newserver provider customer panel) 
+Host: my.newsserver.com (You can find the host for your provider either in the email given to you when you signed up or your newserver provider customer panel)
 Port: 119 (This is normally fine however this depends on your provider check your provided news provider details)
 Username: Username given to you by your provider
 Password: Password given to you by your provider

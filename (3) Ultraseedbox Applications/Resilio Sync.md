@@ -1,3 +1,7 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing Resilio Sync to sync your cloud storage will create extreme strain on your slot's disk and could cause a 24 hour ban on accessing your cloud storage. Please Consider Rsync or Rclone with a reasonable limit set on speed. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
 **Resilio Sync** (formerly BitTorrent Sync) is a proprietary peer-to-peer file synchronization and sharing tool. It can securely sync files between devices on a local network, or between remote devices over the Internet via a modified version of the BitTorrent protocol. Major features are the following:
 
 *   Traffic between devices is encrypted with AES-128
@@ -110,7 +114,7 @@ mkdir ~/resilio
 echo ~/resilio
 ```
 
-Copy the output of that file then Edit the option in Resilio by unticking “Ask where to save each file before downloading” then add the full path of `resilio` to the end of the path 
+Copy the output of that file then Edit the option in Resilio by unticking “Ask where to save each file before downloading” then add the full path of `resilio` to the end of the path
 
 #### Speed Throttling
 

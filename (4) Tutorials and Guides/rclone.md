@@ -1,3 +1,8 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. It is very important _not_ to mount your Cloud storage to any of the premade folders, this creates massive instability for both you and everyone else on your server. _Always follow the documentation and create a new folder for mounting_. 
+It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
 ::: warning
 USB support is unable to provide support for rclone, this is due to the large volume of variables and different configurations possible with rclone. The guides found here on the knowledge-base should be able to guide you through using rclone, and any further questions can easily be answered with a quick Google search. You may also be able to find community support for rclone through our community Discord server or the Rclone forums.
 :::
@@ -126,13 +131,13 @@ Leave blank normally.
 Fill in to access "Computers" folders. (see docs).
 Enter a string value. Press Enter for the default ("").
 root_folder_id>
- 
+
 Service Account Credentials JSON file path
 Leave blank normally.
 Needed only if you want use SA instead of interactive login.
 Enter a string value. Press **Enter** for the default ("").
 service_account_file>
- 
+
 Edit advanced config? (y/n)
 y) Yes
 n) No
@@ -151,11 +156,11 @@ Use auto config?
 y) Yes
 n) No
 y/n> n
- 
+
 If your browser doesn't open automatically go to the following link: <URL WILL BE HERE>
 Log in and authorize rclone for access
 Enter verification code> random string
- 
+
 Configure this as a team drive?
 y) Yes
 n) No
@@ -164,7 +169,7 @@ y/n> n
 
 * You will be shown a confirmation screen. If all is okay, type `y` and then press **Enter** to save your configuration.
 * If you notice any issues, you can edit them from here by typing `e`, or delete them using `d`. Finally, press `q` and then **Enter** to quit the rclone config wizard.
-    
+
 
 ```
 --------------------
@@ -194,19 +199,19 @@ These commands are useful to remember. They allow you to interact with rclone an
 ```
 config - Execute this command to add, modify or remove remote file hosts.
 Usage: rclone config
- 
+
 copy - Used to copy files between two locations, remote -> remote, remote -> local, local -> remote
 Usage: rclone copy [-P] {origin} {destination}
- 
+
 move - Same as copy however does not leave the files at the source
 Usage: rclone move [-P] {origin} {destination}
- 
+
 sync - Will make the destination directory identical to the origin. If files exist on destination that do not on origin they will be deleted. Be careful with the sync command as it can cause date loss.
 Usage: rclone sync [-P] {origin} {destination}
- 
+
 When dealing with remote filesystems use:
 {remote}:{path}
- 
+
 For example, if you wished to copy a file named movie.mkv from your current working directory to a path named Movies in a remote name Drive you'd use this command:
 rclone copy movie.mkv Drive:Movies
 ```
@@ -260,7 +265,7 @@ Current remotes:
 
 Name                 Type
 ====                 ====
-gdrive               drive 
+gdrive               drive
 
 e) Edit existing remote
 n) New remote
@@ -494,7 +499,7 @@ Current remotes:
 
 Name                 Type
 ====                 ====
-gdrive               drive 
+gdrive               drive
 
 e) Edit existing remote
 n) New remote
@@ -751,7 +756,7 @@ then
   exit
 else
   touch "$LOCK_FILE"
-  
+
   rclone_move() {
     rclone_command=$(
       "$HOME"/bin/rclone move -vP \
@@ -770,22 +775,22 @@ else
       --drive-stop-on-upload-limit \
       "$SOURCE_DIR" "$DESTINATION_DIR" 2>&1
     )
-    # "--stats=9999m" mitigates early stats output 
+    # "--stats=9999m" mitigates early stats output
     # "2>&1" ensures error output when running via command line
     echo "$rclone_command"
   }
   rclone_move
 
   if [ "$DISCORD_WEBHOOK_URL" != "" ]; then
-  
+
     rclone_sani_command="$(echo $rclone_command | sed 's/\x1b\[[0-9;]*[a-zA-Z]//g')" # Remove all escape sequences
 
-    # Notifications assume following rclone ouput: 
+    # Notifications assume following rclone ouput:
     # Transferred: 0 / 0 Bytes, -, 0 Bytes/s, ETA - Errors: 0 Checks: 0 / 0, - Transferred: 0 / 0, - Elapsed time: 0.0s
 
     transferred_amount=${rclone_sani_command#*Transferred: }
     transferred_amount=${transferred_amount%% /*}
-    
+
     send_notification() {
       output_transferred_main=${rclone_sani_command#*Transferred: }
       output_transferred_main=${output_transferred_main% Errors*}
@@ -796,7 +801,7 @@ else
       output_transferred=${rclone_sani_command##*Transferred: }
       output_transferred=${output_transferred% Elapsed*}
       output_elapsed=${rclone_sani_command##*Elapsed time: }
-      
+
       notification_data='{
         "username": "'"$DISCORD_NAME_OVERRIDE"'",
         "avatar_url": "'"$DISCORD_ICON_OVERRIDE"'",
@@ -833,10 +838,10 @@ else
           }
         ]
       }'
-      
-      /usr/local/bin/curl -H "Content-Type: application/json" -d "$notification_data" $DISCORD_WEBHOOK_URL 
+
+      /usr/local/bin/curl -H "Content-Type: application/json" -d "$notification_data" $DISCORD_WEBHOOK_URL
     }
-    
+
     if [ "$transferred_amount" != "0" ]; then
       send_notification
     fi

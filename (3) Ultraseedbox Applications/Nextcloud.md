@@ -1,3 +1,7 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing Nextcloud to share your cloud storage will create extreme strain on your slot's disk and could cause a 24 hour ban on accessing your cloud storage. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
 **Nextcloud** is a free and open-source suite of client-server software for creating and using file hosting services. It was a fork of ownCloud and it has been actively developed by some of the original developers of ownCloud. In contrast to proprietary cloud providers like Dropbox, Office 365 or Google Drive, Nextcloud enables users to deploy their own file hosting server and have full control of their data.
 
 For more information, visit [Nextcloud's home page.](https://nextcloud.com/)
@@ -103,7 +107,7 @@ We'll also guide you on how to sync your files to your device using Nextcloud's 
 ```sh
 usbdocs@lw701:~$ echo $HOME
 /home1/usbdocs
-usbdocs@lw701:~$ 
+usbdocs@lw701:~$
 ```
 
 #### Setting Up Seedbox as External Storage

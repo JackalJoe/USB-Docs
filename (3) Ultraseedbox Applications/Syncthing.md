@@ -1,3 +1,7 @@
+::: danger
+Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing Syncthing to sync your cloud storage will create extreme strain on your slot's disk and could cause a 24 hour ban on accessing your cloud storage. Please Consider Rsync or Rclone with a reasonable limit set on speed. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+:::
+
 **Syncthing** is a free, open-source peer-to-peer file synchronization application that's written in Go. It synchronizes files between two or more computers securely and seamlessly.
 
 For more information on this, please visit [this link.](https://syncthing.net/)
