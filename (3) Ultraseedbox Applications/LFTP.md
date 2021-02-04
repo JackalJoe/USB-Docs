@@ -1,130 +1,62 @@
-## Command line based FTP client
+## Command line File Sync Application
 
- LFTP is a fully featured FTP client with a CLI interface:
+ Rsync is a very robust CLI tool that provides fast incremental file transfer with many features:
 
--   Multiple segmented Download/Upload
+-   Checksum verification
 
 -   Automation via Bash script
 
--   Multiple simultaneous downloads
+-   Resume broken transfer
 
--   Directory Navigation
+-   Preinstalled on Most Linux/Unix Systems
 
-https://lftp.yar.ru/
+https://rsync.samba.org/
 
-### Pushing files from your slot using LFTP
+### Pulling files from your slot using Rsync
 
-This is for those that would like to automate downloading or "pushing" files off of your Ultraseedbox Slot to another FTP server. For example you may run a Network Attached Storage device at home which is able to run a simple SFTP/FTP server. This command below can be setup to run automatically and send anything in one folder to your Server at your residence while you sleep. Great for grabbing the latest Nightlight Linux distro's.  
+Given the fact Rsync is included on Most if not all modern Distros, It is simple to begin pulling files from your Ultraseedbox slot. First login to the machine you plan on storing the pulled files. Not your Ultraseedbox Slot
 
-`lftp -u destinationusername,destinationpassword -e 'mirror --reverse --parallel=3 --continue --use-pget-n=5 --only-missing /home3/usbdocs/files/LFTP /home/destinationusername/LFTP; quit' sftp://destinationip:port`
-
-The Path `/home3/usbdocs/files/LFTP` is used purely as an example you could change this to any path on your Ultraseedbox Slot and LFTP would push that path to the target. You may also add multiple copies of the above line when creating your bash script (details below) to sync multiple folders to multiple target servers and/or folders.
-
-| Argument          | Effect                                                                                                                                                                                                                                                                                                                                                |
-|:-------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| use-pget-n=2    | Number of Segments per file, This is best matched to the number of Parallel downloads for example if your parallel=2 then pget-n=2 too. Don’t aim for two high a number for example 4 and 4 would be 4 downloads each in 4 segments for 16 threads even this maybe higher then required. Experiment to see what works best for your target connection |
-| continue        | Create .part files in case of accidental disconnection. This will allow the next run of lftp to pick up where it left off. This may need disabling if you fine the end transfer to be corrupted (just delete --continue)                                                                                                                               |
-| mirror          | specify a source and target directory                                                                                                                                                                                                                                                                                                                 |
-| parallel=number | Number of files to Push to target at once                                                                                                                                                                                                                                                                                                             |
-| reverse         | reverse mirror i.e. put all files from a Ultraseedbox slot to a Target Server                                                                                                                                                                                                                                                                         |
-| only-missing    | Push only files not already present on the target server                                                                                                                                                                                                                                                                                              |
-sftp://destinationip:port| This will need to be changed to reflect the type of server your connecting to SFTP/FTP the example here connects to an SFTP server. destinationip and port will need filling based on your target connection details.
+`rsync -aHAXxv --numeric-ids --info=progress2 --bwlimit=20000 user@lwxx.usbx.me:./path/to/download/ /home/targetusername/path/to/save/to`
 
 
-### Uploading files to your slot using LFTP
+Rsync will now ask you if your hostkey is correct, If this is your first time connecting this is totally normal type `yes` and hit Enter. This will now prompt you for your Ultraseedbox SSH Password.
 
-Uploading to your slot is just as simple as downloading from your slot "pushing". Using the same command above will work as long as it is run from the location you want your files to arrive at.
-`lftp -u usbslotusername,usbslotpassword -e 'mirror --reverse --parallel=3 --continue --use-pget-n=5 --only-missing /home/destinationusername/LFTP /home3/usbdocs/files/LFTP; quit' sftp://destinationip:22`
-
-Notice that the main changes are the order of directory and the address at the end. The function of the command is exactly the same, It is just the direction that has changed.
-
-### Automating the Process With Bash and Crontab
-
-Your first step is to find the full path of your home directory `pwd` will output your full home path.
-
-Something like this will be outputted be sure to make a note of it :
-
-
-`/home3/usbdocs`
-
-then create two new folders, one may already exist this is fine
-
-`mkdir ~/lock`
-
-`mkdir ~/scripts`
+| Argument          | Effect                                                                                                           |
+|:-------------------:|:------------------------------------------------------------------------------------------------------------------:|
+| -a                | Tells rsync to recursively copy everything                                                                       |
+| -H                | This tells rsync to look for hard-linked files in the source and link together the matching files on the target  |
+| -A                | Tells Rsync to keep permissions the same on target                                                               |
+| -X                | Tells Rsync to keep any file attributes the same on target                                                       |
+| -x                | Tells Rsync to avoid copying Mounts and fuse based filesystem                                                    |
+| -v                | show all output                                                                                                  |
+| --bwlimit=20000   | Apply a Bandwidth limit of 20 Megabytes                                                                          |
+| user@lwxx.usbx.me | Fill this with your Ultraseedbox Username and Server address                                                     |
 
 
-Then you need to enter the new folder called scripts
 
-`cd ~/scripts`
+### Uploading files to your slot using Rsync
 
-And create the script file
+Uploading to your slot is just as simple as downloading from your slot to a new location. Login to your Ultraseedbox Slot
+`rsync -aHAXxv --numeric-ids --info=progress2 --bwlimit=20000 -e "ssh -p portnumberhere" username@remoteip:/home/remoteusername/ ~/Rsyncdrop
+`
 
-`nano LFTP.sh`
+Please note `portnumberhere` this is added so if your target machine is using an ssh port that is not the standard 22 you can insert it here, otherwise please enter 22 in its place
 
-Paste the following lines into it :
-```
-#!/bin/bash
-exec {lock_fd}>/home1/usbdocs/lock/lftpLock || exit 1
-flock -n "$lock_fd" || { echo "ERROR: flock() failed." >&2; exit 1; }
-if [ -z "$STY" ]; then exec screen -dm -S lftp /bin/bash "$0"; fi
+Like when Pulling files from your Ultraseedbox slot, you will be prompted to confirm your hostkey and remote machines SSH Password.
 
-lftp -u destinationusername,destinationpassword 'mirror --reverse --parallel=3 --continue --use-pget-n=5 --only-missing /home3/usbdocs/files/LFTP /home/destinationusername/LFTP; quit' sftp://destinationip:port
+### Creating a Full copy of a Userspace from a remote Server
 
-flock -u "$lock_fd"
-```
-Save it by pressing Ctrl+X then Y then Enter. You will need to change the paths “home3/usbdocs” to match your own home and username.
+You will find this familiar if you have followed our provider migration guide, However now is a good time to refresh yourself on the Process as it can be adjusted for many different paths etc.
 
-Now we need to set a few things that will be passed to LFTP automatically ready for automation.
+So exactly like before when uploading files to your Ultraseedbox Slot you will need to run this from your slot.
 
-create a folder to house the configuration file.
+We recommend running a screen if you are copying a large directory structure.
 
-`mkdir ~/.lftp`
+`screen -r transfer`
 
-now create the rc file to place the options inside
+`rsync -aHAXxv --numeric-ids --info=progress2 --bwlimit=20000 -e "ssh -p portnumberhere" username@host:/home/remoteusername usercopy`
 
-`nano ~/.lftp/rc`
+Press `CTRL A+D` to detach leaving the transfer running
+you can reattached with `screen -rdf usercopy`
 
-Paste these lines in and save
-```
-set net:limit-total-rate 0:41943040
-set ssl:verify-certificate no
-```
-
-#### Testing the script before Automating
-
-So to test first we navigate to ~/scripts folder we made earlier
-
-`cd ~/scripts`
-
-Then we need to allow the LFTP.sh permissions to run
-
-`chmod +x LFTP.sh`
-
-And finally, run it
-
-`./LFTP.sh`
-
-If the script is running and you were to run it again, you may see an error message “Flock Failed” this is a file lock to stop multiple backups running and is totally normal. If you are sure it isn’t running you can delete the lock file from ~/lock. You can also check the progress of the backup script which is running in a screen with the command
-
-`screen -rd lftp`
-
-#### Setting the automation and time
-
-If all is well after the test we can automate the check via crontab
-
-Open crontab with
-
-`crontab -e`
-
-You may have a choice of editors we recommend Nano
-
-Inside the crontab add a single line under everything else in the file that looks like this
-
-`0 */4 * * *  /home3/usbdocs/scripts/LFTP.sh`
-
-Save it by pressing Ctrl+X then Y then Enter.
-
-Once again we want to remind you that the paths will need changing to reflect the path shown by the `pwd` command
-
-The script will now run every 4 hours checking for files that have changed and sync them to the target server. Please be aware anything removed from the Target will be synced again. Remove the item from the source or move it to a non synced folder.
+This will place all of your remote servers /home/username directory to a folder called `usercopy` on your Ultraseedbox Slot.
