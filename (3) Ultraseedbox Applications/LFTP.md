@@ -52,11 +52,11 @@ So exactly like before when uploading files to your Ultraseedbox Slot you will n
 
 We recommend running a screen if you are copying a large directory structure.
 
-`screen -r transfer`
+`screen -r usercopy`
 
 `rsync -aHAXxv --numeric-ids --info=progress2 --bwlimit=20000 -e "ssh -p portnumberhere" username@host:/home/remoteusername usercopy`
 
 Press `CTRL A+D` to detach leaving the transfer running
-you can reattached with `screen -rdf usercopy`
+you can reattached with `screen -rd usercopy`
 
 This will place all of your remote servers /home/username directory to a folder called `usercopy` on your Ultraseedbox Slot.
