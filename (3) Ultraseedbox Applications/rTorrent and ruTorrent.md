@@ -259,3 +259,117 @@ cd ~/www/rutorrent/plugins/ && svn checkout https://github.com/Novik/rutorrent/t
   * One of torrent trackers is private
 
 ![](https://docs.usbx.me/uploads/images/gallery/2020-03/unknown-(1).png)
+
+## Editing rtorrent.rc to allow more options
+
+Rtorrent is a fairly powerful torrent client with many features not in use by
+default, being a command line application changing settings require you to edit
+a file on your slot while rtorrent is shutdown. Without this method any changes
+made using the Webui companion RUtorrent will be lost whenever you next restart
+the rtorrent process.
+
+Editing the settings can cause issues if done incorrectly and Ultraseedbox
+cannot support modifications done to rtorrent.rc.
+
+You will need to use SSH in order to follow this guide.
+
+### Backing up your original file before editing
+
+If this is your first time editing values in rtorrent it is best to first create
+a copy so it can be restored should anything go wrong.
+
+`This can totally break your rtorrent installation BACKUP is a MUST.`
+
+Your .rtorrent.rc is located in your home folder so it is simple to backup in
+one command
+
+`cp ~/.rtorrent.rc .rtorrent.rc.bk`
+
+This will leave you with two files now `rtorrent.rc` and `.rtorrent.rc.bk`
+
+If you make a mistake on the original file you can easily revert back by running
+the following commands
+
+`rm ~/.rtorrent.rc`
+
+`cp ~/.rtorrent.rc.bk ~/.rtorrent.rc`
+
+This keeps the backup intact so you wont need to backup again until you settle
+on your working modified version.
+
+Now that the file is safe we can begin to dig into the file but before doing so
+you must stop rutorrent/rtorrent via your control panel it is considered a good measure to pause your active torrents before stopping rtorrent/rutorrent as it will be quicker when starting again.
+
+Return to you SSH client and open up the .rtorrent.rc file.
+
+` nano .rtorrent.rc`
+
+Now what you see is the current configuration, don’t worry as any changes can be
+added to a new line at the bottom
+
+### Options Available
+
+### Adding new watch Directory with RUtorrent label
+
+You may need to create the watch directories you plan on using before you can
+make the changes this can be done with this command
+
+`mkdir -p ~/watch2` changing the path ~/watch2 to whatever you’d like to
+call your new watch directory
+
+```
+
+schedule =
+watch_directory_2,5,5,load.start=~/watch2/*.torrent,d.set_custom1=watch2"
+
+schedule =
+watch_directory_3,5,5,load.start=~/watch3/*.torrent,d.set_custom1=watch3"
+
+schedule =
+watch_directory_4,5,5,load.start=~/watch4/*.torrent,d.set_custom1=watch4"
+
+```
+
+To help explain what the above is actually telling rtorrent we can easily break
+it down
+
+` schedule = watch_directory` Explains the kind of instruction you are passing
+to rtorrent
+
+`_2,5,5` Now this is important, notice in the example above that the first
+number in the sequence is rising with each watch folder you must make sure that
+each watch folder you add has the following number
+
+` load.start=~/ load.start=~/watch2/*.` start download instruction and the
+path to the folder to watch for .torrent files (setting the value `load.start
+to load.normal will cause torrents to be added in a “Paused” state)
+
+` d.set_custom1=watch3"` Direction to create a label for any files found in
+the watch directory specified in the line.
+
+Once your modification is completed press Ctrl+X then Press Y and then Enter to
+confirm and save
+
+
+### Move completed files to Folder matching Label Number
+
+Building on the above it is possible to move completed downloads to a folder
+matching your label name.
+
+For example we want all files under our new watch folder “watch2” to be stored
+in a folder called watch2 inside our `~/files` directory. This will actually
+apply to any labels you are using so please keep this in mind before making the
+change bellow.
+
+Paste this code under your watch directory code and Save.
+
+```
+method.insert = d.get_finished_dir,simple,"cat=~/files/,$d.get_custom1="
+method.set_key =
+event.download.finished,move_complete,"d.set_directory=$d.get_finished_dir=;execute=mkdir,-p,$d.get_finished_dir=;execute=mv,-u,$d.get_base_path=,$d.get_finished_dir="
+```
+
+Rtorrent/rutorrent can now be started
+
+The changes will only apply to any future torrents so it is a good idea to now
+give this a test by placing a .torrent file into your new watch directory.
