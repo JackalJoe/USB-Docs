@@ -1,6 +1,6 @@
 
-## Ultraseedbox Billing Panel
-### Purchasing your Ultraseedbox Slot
+## Ultra.cc Billing Panel
+### Purchasing your Ultra.cc Slot
 #### Creating an Account
 #### Purchasing a Product
 #### Purchasing Addons
@@ -16,7 +16,7 @@ This section will show you how to set up an automatic PayPal subscription. This 
 
 ***
 
-* Login to your Ultraseedbox client area and click on **View All**
+* Login to your Ultra.cc client area and click on **View All**
 
 ![](https://docs.usbx.me/uploads/images/gallery/2020-05/image-1588619314505.png)
 
@@ -42,4 +42,4 @@ This section will show you how to set up an automatic PayPal subscription. This 
 
 ![](https://docs.usbx.me/uploads/images/gallery/2020-05/image-1588619457500.png)
 
-#### Coinbase
+#### CoinbaseUltra.cc

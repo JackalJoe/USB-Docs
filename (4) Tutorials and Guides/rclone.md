@@ -1,5 +1,5 @@
 ::: danger
-Please make yourself aware of the Ultraseedbox Fair Usage Policy. It is very important _not_ to mount your Cloud storage to any of the premade folders, this creates massive instability for both you and everyone else on your server. _Always follow the documentation and create a new folder for mounting_. 
+Please make yourself aware of the Ultra.cc Fair Usage Policy. It is very important _not_ to mount your Cloud storage to any of the premade folders, this creates massive instability for both you and everyone else on your server. _Always follow the documentation and create a new folder for mounting_.
 It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
 :::
 

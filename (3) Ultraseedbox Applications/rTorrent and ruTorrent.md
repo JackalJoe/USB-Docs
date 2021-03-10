@@ -1,5 +1,5 @@
 ::: danger
-Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing any torrent client to seed from your cloud storage using Rclone will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+Please make yourself aware of the Ultra.cc Fair Usage Policy. Directly pointing any torrent client to seed from your cloud storage using Rclone will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
 :::
 
 **rTorrent** is a text-based ncurses BitTorrent client written in C++, based on the libTorrent libraries for Unix, whose author's goal is "a focus on high performance and good code". It is known to be stable and can handle a large number of seeding torrents, making it a solid choice for long-term seeding.
@@ -268,7 +268,7 @@ a file on your slot while rtorrent is shutdown. Without this method any changes
 made using the Webui companion RUtorrent will be lost whenever you next restart
 the rtorrent process.
 
-Editing the settings can cause issues if done incorrectly and Ultraseedbox
+Editing the settings can cause issues if done incorrectly and Ultra.cc
 cannot support modifications done to rtorrent.rc.
 
 You will need to use SSH in order to follow this guide.

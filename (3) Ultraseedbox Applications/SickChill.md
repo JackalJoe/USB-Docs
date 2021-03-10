@@ -15,7 +15,7 @@ In this section, we’ll be setting up SickChill for the first time. This assume
 4.  Enable Organization
 5.  Adding your first series
 
-After the Installation of SickChill via the Ultraseedbox Control Panel and opening the Web interface by clicking **Connect**, you will be presented with this page asking for your username and password. This is the password you set when installing SickChill Username can be found in the Control Panel.
+After the Installation of SickChill via the Ultra.cc Control Panel and opening the Web interface by clicking **Connect**, you will be presented with this page asking for your username and password. This is the password you set when installing SickChill Username can be found in the Control Panel.
 
 ![](https://i.imgur.com/2lR6M1N.png)
 
@@ -28,7 +28,7 @@ Your first steps are to address the settings.
 
 ![](https://i.imgur.com/V1yDoun.png)
 
-There is only one option here that must be adjusted to work with the Ultraseedbox folder structure. By default, **Show root directories** is set to your `files` folder like this:
+There is only one option here that must be adjusted to work with the Ultra.cc folder structure. By default, **Show root directories** is set to your `files` folder like this:
 
 ![](https://i.imgur.com/dUYcsBo.png)
 

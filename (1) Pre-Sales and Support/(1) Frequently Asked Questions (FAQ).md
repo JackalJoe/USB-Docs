@@ -1,7 +1,7 @@
 #### Pre-Sales
-##### Who is Ultraseedbox?
+##### Who is Ultra.cc?
 
-Ultraseedbox is a trusted app hosting platform that has been in operation for over a decade. We provide managed shared slots with one-click solutions for the most popular Linux media applications, non-root shell access, and premium support. We innovate and strive to make sure that our clients are taken care of.
+Ultra.cc is a trusted app hosting platform that has been in operation for over a decade. We provide managed shared slots with one-click solutions for the most popular Linux media applications, non-root shell access, and premium support. We innovate and strive to make sure that our clients are taken care of.
 ##### What are the applications offered as one-click-installers?
 
 * Airsonic
@@ -38,7 +38,7 @@ Ultraseedbox is a trusted app hosting platform that has been in operation for ov
 
 Our servers are hosting with Novoserve and YISP. Both operate their data centers in the Netherlands.
 
-##### Is root/sudo access available to install applications that are not offered by Ultraseedbox?
+##### Is root/sudo access available to install applications that are not offered by Ultra.cc?
 
 Users do not have sudo or root access.
 ##### What are the upload and download quota limits?
@@ -72,14 +72,14 @@ Generally, around one 10Mbps X264 -> X264 1080p transcode per available core but
 
 Yes. Please open a ticket [here](https://my.ultraseedbox.com/submitticket.php), and our support staff will be happy to do this on your behalf.
 
-##### Does Ultraseedbox "oversell"?
+##### Does Ultra.cc "oversell"?
 
 This term is often thrown around on public forums and Reddit. No, we do not "oversell" slots. The fact is that you could put two or three users on a disk and overload the IO. Some clients can be noisy, that is a fact, of course, and we will do everything we can to resolve that issue. Everybody's expectations and habits are different. If a user needs to be moved for load balancing or better customer experience, we will do that.
 
 #### Payments and Refunds
 ##### I want to pay automatically via PayPal. How can I do that?
 
-After you have agreed to Ultraseedboxâ€™s Terms of Service and chose PayPal as your payment option, you will see two buttons in the top right of your invoice, one will be PayPal Checkout, and the other will say Subscribe. Click the **subscribe button** to set up a pre-approved agreement with PayPal. After this, your subsequent invoices will be paid automatically. Take note that the Subscribe button will vanish on overdue invoices.
+After you have agreed to Ultra.cc Terms of Service and chose PayPal as your payment option, you will see two buttons in the top right of your invoice, one will be PayPal Checkout, and the other will say Subscribe. Click the **subscribe button** to set up a pre-approved agreement with PayPal. After this, your subsequent invoices will be paid automatically. Take note that the Subscribe button will vanish on overdue invoices.
 
 In regards to the pre-approved payments, this is an agreement between you and PayPal. If you cancel your service or apply for a refund, you must cancel this subscription on your end.
 
@@ -122,7 +122,7 @@ No. All users are jailed to their home directory and can not access other usersâ
 
 We keep certain logs for troubleshooting purposes. For more information on this, please read the Data Handling Privacy.
 
-##### Do Ultraseedbox Slots come with a VPN?
+##### Do Ultra.cc Slots come with a VPN?
 
 Yes, each service comes with three VPN configurations for three separate devices to keep your web browsing anonymous.
 
@@ -134,12 +134,12 @@ Changing usernames is not possible due to how your username is used for the depl
 
 For security reasons, you will need to open a support ticket [here](https://my.ultraseedbox.com/submitticket.php) with this request, and our support team will be happy to assist with applying the requested email change for you.
 
-##### Does Ultraseedbox forward DMCA Notices?
+##### Does Ultra.cc forward DMCA Notices?
 
 Our Data Centers are in the EU and not in the US, but we are legally obligated to forward DMCA's from our host if required.
 
 #### Managing Your Seedbox
-##### Will I be able to install my applications other than the ones supported by Ultraseedbox?
+##### Will I be able to install my applications other than the ones supported by Ultra.cc?
 
 Yes. You may install and run any programs in your userspace/Home directory via your slot's SSH shell access, providing they do not abuse server resources and is within our policies.
 

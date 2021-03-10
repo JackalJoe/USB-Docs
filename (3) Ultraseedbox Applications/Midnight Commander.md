@@ -16,7 +16,7 @@ https://midnight-commander.org/
 
 ### Copy operation in Midnight commander (MC)
 
-By Default all Ultraseedbox slots come with Midnight Commander installed and it
+By Default all Ultra.cc slots come with Midnight Commander installed and it
 can be started as easily as connecting to your Slot via SSH and issuing the
 command `mc` this will present you with Midnight commander
 

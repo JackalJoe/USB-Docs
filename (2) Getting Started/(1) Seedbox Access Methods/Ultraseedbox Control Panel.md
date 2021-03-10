@@ -1,6 +1,6 @@
-**The UltraSeedbox's Control Panel (UCP)** is your one-stop, easy panel to managing your UltraSeedbox slot. Here, you can easily set your slot access credentials, managing and accessing your apps.
+**The Ultra.cc Control Panel (UCP)** is your one-stop, easy panel to managing your Ultra.cc slot. Here, you can easily set your slot access credentials, managing and accessing your apps.
 
-This short section will walk you through the UltraSeedbox Control Panel.
+This short section will walk you through the Ultra.cc Control Panel.
 
 ***
 
@@ -32,7 +32,7 @@ If you are logging in for the first time after you've purchased your first USB s
 
 ***
 
-## UltraSeedbox Control Panel Tour
+## Ultra.cc Control Panel Tour
 ### Dashboard
 
 * Here, you can see an overview of all of your active seedboxes under your account.
@@ -62,7 +62,7 @@ If you are logging in for the first time after you've purchased your first USB s
 
 ### Access Details
 
-* Here you can get connection details of your slot. You have several ways to interact, connect and use your UltraSeedbox slot.
+* Here you can get connection details of your slot. You have several ways to interact, connect and use your Ultra.cc slot.
 * Here it shows the access details, the ports listed and the password. You can also change the password for each access.
 
 ![](https://docs.usbx.me/uploads/images/gallery/2020-05/image-1590585466490.png)
@@ -104,9 +104,9 @@ If you are logging in for the first time after you've purchased your first USB s
 
 ***
 
-## Managing your Ultraseedbox Apps
+## Managing your Ultra.cc Apps
 
-In this guide, we'll be showing you ways on managing your Ultraseedbox installable apps. This includes installing, uninstalling, upgrading and cleanup of the apps.
+In this guide, we'll be showing you ways on managing your Ultra.cc installable apps. This includes installing, uninstalling, upgrading and cleanup of the apps.
 
 ### Installing Apps
 

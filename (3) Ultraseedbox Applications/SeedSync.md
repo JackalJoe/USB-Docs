@@ -16,18 +16,18 @@
 Seedsync is a nice simple representation of the functions available in the LFTP
 CLI application, As such you will want to install on a system you want files
 pulled to for example a NAS on your home network. This guide will use
-Ultraseedbox slot as the origin of any files downloaded.
+Ultra.cc slot as the origin of any files downloaded.
 
 ![]( <https://i.imgur.com/eIp0GzO.png>)
 
 | Field                                       | Value                                                                                                                                                                   |
 |:---------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Server Address                              | Your Ultraseedbox Address (lwxx.usbx.me)                                                                                                                                |
-| Server Username                             | Your Ultraseedbox Username                                                                                                                                              |
-| Server Password                             | Your Ultraseedbox Password                                                                                                                                              |
+| Server Address                              | Your Ultra.cc Address (lwxx.usbx.me)                                                                                                                                |
+| Server Username                             | Your Ultra.cc Username                                                                                                                                              |
+| Server Password                             | Your Ultra.cc Password                                                                                                                                              |
 | Server Directory                            | Folder path you would like downloaded to your local machine for example ~/files/                                                                                       |
-| Local Directory                             | Folder path you would like the files stored on your local server for example /home/username/ultraseedbox (this folder will need to be created or already exist)         |
-| Remote SSH Port                             | For Ultraseedbox 22 is the default, but if you are connecting to a different machine you will need to change this to match the machine your downloading from            |
+| Local Directory                             | Folder path you would like the files stored on your local server for example /home/username/Ultra.cc (this folder will need to be created or already exist)         |
+| Remote SSH Port                             | For Ultra.cc 22 is the default, but if you are connecting to a different machine you will need to change this to match the machine your downloading from            |
 | Server Script path                          | This is the location that Seedsync will install its “watcher” which will allow Seedsync to know when new files are available in your Auto Queue settings                |
 | Enable Auto Queue                           | Leave this checked as one of the main features of seedsync is the automation                                                                                            |
 | Enable Auto Extraction                      | This is also best left on as if your Linux Iso is zipped to save space this will unpack it leaving you with a ready to use .ISO                                         |

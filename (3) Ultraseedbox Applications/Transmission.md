@@ -1,5 +1,5 @@
 ::: danger
-Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing any torrent client to seed from your cloud storage using Rclone will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+Please make yourself aware of the Ultra.cc Fair Usage Policy. Directly pointing any torrent client to seed from your cloud storage using Rclone will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
 :::
 
 **Transmission** is a BitTorrent client which features a variety of user interfaces written in C/Objective-C. It is:
@@ -90,7 +90,7 @@ For Windows, you may have to install an additional program, otherwise upon conne
 
 #### Connecting and Using Transmission Remote GUI
 
-Connecting to your Ultraseedbox Transmission is a relatively simple process.
+Connecting to your Ultra.cc Transmission is a relatively simple process.
 
 #### Creating a New Connection
 
@@ -102,8 +102,8 @@ Port: 443
 Use SSL: Ticked
 Authentication required: Ticked
 Always Auto-Connect: Ticked
-Username: Found in your Ultraseedbox Control Panel
-Password: Found in your Ultraseedbox Control Panel
+Username: Found in your Ultra.cc Control Panel
+Password: Found in your Ultra.cc Control Panel
 RPC path: /transmission/rpc
 ```
 

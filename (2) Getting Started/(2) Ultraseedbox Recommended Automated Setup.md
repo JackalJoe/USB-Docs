@@ -1,4 +1,4 @@
-This guide as your guide to fully setting up your Ultraseedbox slot based on our recommended apps.
+This guide as your guide to fully setting up your Ultra.cc slot based on our recommended apps.
 
 This guide assumes the following:
 
@@ -18,7 +18,7 @@ Provided below is a checklist of what to do. Each section has links to a step-by
 
 ***
 
-#### Ultraseedbox Control Panel 
+#### Ultra.cc Control Panel
 
 - [ ]  [Ultraseedbox Control Panel Tour](https://docs.usbx.me/books/ultraseedbox-control-panel-%28ucp%29/page/ultraseedbox-control-panel-tour)
 - [ ]  [Managing your Ultraseedbox Apps](https://docs.usbx.me/books/ultraseedbox-control-panel-%28ucp%29/page/managing-your-ultraseedbox-apps)

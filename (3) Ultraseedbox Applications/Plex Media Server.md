@@ -13,12 +13,12 @@ In this section, we will be detailing the initial configuration of your Plex Med
 ### Prerequisites
 
 * A Plex account - you can make one at https://plex.tv
-* A Plex supported UltraSeedbox plan
+* A Plex supported Ultra.cc plan
 * Plex Pass - This is optional but is required if you want to take advantage of GPU acceleration for Pro NVMe Streaming Plans.
 
 ### Initial UCP Configuration
 
-Like all applications Plex Media Server is installed from the UltraSeedbox Control Panel, this application however has one extra step. When you click on Install and are prompted with this screen you will need to visit [https://www.plex.tv/claim/](https://www.plex.tv/claim/)
+Like all applications Plex Media Server is installed from the Ultra.cc Control Panel, this application however has one extra step. When you click on Install and are prompted with this screen you will need to visit [https://www.plex.tv/claim/](https://www.plex.tv/claim/)
 
 ![](https://docs.usbx.me/uploads/images/gallery/2019-10/Claim-Code.PNG)
 
@@ -40,7 +40,7 @@ To upgrade to the latest Plex, you can do this via [SSH](https://docs.usbx.me/bo
 
 Usual causes of this are Plex updates, or the server cannot read or write to the library, which is a common occurrence with rclone mounts. In these cases, the RAM usage of Plex would go up, and the system will kill your Plex instance.
 
-It's also worth mentioning that some of Plex’s features, especially logins, Server Claiming API, and Web apps, are hosted by Plex. Please check here for any announcements on their system: [https://status.plex.tv](https://status.plex.tv). 
+It's also worth mentioning that some of Plex’s features, especially logins, Server Claiming API, and Web apps, are hosted by Plex. Please check here for any announcements on their system: [https://status.plex.tv](https://status.plex.tv).
 
 * First, try to restart Plex and see if it returns after 5 minutes.
 * Check if the container is not damaged. Try to use the upgrade/repair option from your UCP action menu under Installed Applications -> Plex and wait for 5 minutes.
@@ -143,7 +143,7 @@ app-plex upgrade --plex-version=1.20.3.3483-211702a9f
 
 *Written by [fringillidaes](https://github.com/fringillidaes)*
 
-This section guides you in recovering your plex database. You may get this error if your library fails to scan or maybe your plex logs contain the following lines, `Jun 11, 2020 03:57:22.781 [0x7f59bce20b80] ERROR - Database corruption:`. 
+This section guides you in recovering your plex database. You may get this error if your library fails to scan or maybe your plex logs contain the following lines, `Jun 11, 2020 03:57:22.781 [0x7f59bce20b80] ERROR - Database corruption:`.
 
 #### Prerequisites
 

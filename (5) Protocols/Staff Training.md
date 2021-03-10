@@ -1,9 +1,9 @@
 ##  Introduction
 
-This a rough collection of fixes, tips & tricks and routine jobs associated with being part of the Ultraseedbox Staff. Some may not apply depending on your role here — don’t worry this is just to give you the newcomer a point of reference when working. You are still encouraged to ask questions, be inquisitive and learn as much as you can.
+This a rough collection of fixes, tips & tricks and routine jobs associated with being part of the Ultra.cc Staff. Some may not apply depending on your role here — don’t worry this is just to give you the newcomer a point of reference when working. You are still encouraged to ask questions, be inquisitive and learn as much as you can.
 
 
-This guide does not aim to address one specific issue but merely serves as a record of all the fixes and tidbits we learn in a staffer’s role. We hope you enjoy your stay with us and we welcome you wholeheartedly to the Ultraseedbox Family. 
+This guide does not aim to address one specific issue but merely serves as a record of all the fixes and tidbits we learn in a staffer’s role. We hope you enjoy your stay with us and we welcome you wholeheartedly to the Ultra.cc Family.
 
 
 *Please note this guide is forever evolving. If you would like to add to the guide with your tidbit, please feel free to do so but please make sure it is under a relevant header. If one does not exist please create one.*
@@ -115,7 +115,7 @@ The client's Ombi installation should now be fixed and accessible from `https://
 ### RUTORRENT
 
 
-The client cannot connect to rTorrent session via ruTorrent, but we can. 
+The client cannot connect to rTorrent session via ruTorrent, but we can.
 
 
 ### Plex

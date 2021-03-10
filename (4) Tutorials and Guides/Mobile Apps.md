@@ -1,4 +1,4 @@
-This section shows you the different apps that you can use to manage your Ultraseedbox slot.
+This section shows you the different apps that you can use to manage your Ultra.cc slot.
 
 ***
 
@@ -11,7 +11,7 @@ You can download Trandrone from there links:
 * Google Play Store: [https://play.google.com/store/apps/details?id=org.transdroid.lite&hl=en&gl=US](https://play.google.com/store/apps/details?id=org.transdroid.lite&hl=en&gl=US)
 * F-Droid: [https://f-droid.org/en/packages/org.transdroid.lite/](https://f-droid.org/en/packages/org.transdroid.lite/)
 
-### Connecting to your Ultraseedbox server
+### Connecting to your Ultra.cc server
 #### Deluge
 
 **Name:** This is just for your reference and can be any name you wish
@@ -20,11 +20,11 @@ You can download Trandrone from there links:
 
 ![](https://i.imgur.com/Jmi8rnA.jpg)
 
-**IP or hostname:** Here, you need to add your Ultraseedbox URL, which can be found in the first half of your web UI URL  
+**IP or hostname:** Here, you need to add your Ultra.cc URL, which can be found in the first half of your web UI URL  
 
 The format looks like this `username.lw000.usbx.me`
 
-**Username:** Deluge username, which can be found in the application tab of your control panel under show info for Deluge 
+**Username:** Deluge username, which can be found in the application tab of your control panel under show info for Deluge
 
 **Password:** Deluge password which can be found in the application tab of your control panel under show info for deluge under username (you may need to click the eyeball icon to reveal it)
 
@@ -41,7 +41,7 @@ The format looks like this `username.lw000.usbx.me`
 
 ![](https://i.imgur.com/UUmIRgU.jpg)
 
-**Optional Settings:** Most of these options are non-applicable; however, you may want to check notifications when a new torrent is added, and torrent finished notifications depending on your preference 
+**Optional Settings:** Most of these options are non-applicable; however, you may want to check notifications when a new torrent is added, and torrent finished notifications depending on your preference
 
 ![](https://i.imgur.com/pdeoC2H.jpg)
 
@@ -55,7 +55,7 @@ Upon opening Transdrone, you will need to click the three dots on the top right-
 
 ![](https://i.imgur.com/Jmi8rnA.jpg)
 
-**IP or hostname:** Here, you need to add your hostname, which can be found in the Ultraseedbox Control panel under rutorrent and will include your username like below it may consist of `https://` this must be removed when adding to transdrone.
+**IP or hostname:** Here, you need to add your hostname, which can be found in the Ultra.cc Control panel under rutorrent and will include your username like below it may consist of `https://` this must be removed when adding to transdrone.
 
 `username.lw000.usbx.me`
 
@@ -65,7 +65,7 @@ Upon opening Transdrone, you will need to click the three dots on the top right-
 
 ![](https://i.imgur.com/MTFJjBn.jpg)
 
-**Advance Settings:** Advance Settings contains four settings you need to address 
+**Advance Settings:** Advance Settings contains four settings you need to address
 
 * **Port:** 443
 * **SCGI mount point:** /RPC2
@@ -76,7 +76,7 @@ Upon opening Transdrone, you will need to click the three dots on the top right-
 
 ![](https://i.imgur.com/wzNjURl.jpg)
 
-**Optional Settings:** Most of these options are non-applicable; however, you may want to check notifications when a new torrent is added, and torrent finished notifications depending on your preference 
+**Optional Settings:** Most of these options are non-applicable; however, you may want to check notifications when a new torrent is added, and torrent finished notifications depending on your preference
 
 ![](https://i.imgur.com/pdeoC2H.jpg)
 
@@ -90,11 +90,11 @@ Upon opening Transdrone, you will need to click the three dots on the top right-
 
 ![](https://i.imgur.com/Jmi8rnA.jpg)
 
-**IP or hostname:** Here, you need to add your hostname, which can be found in the Ultraseedbox Control panel under Transmission and will include your username like below it may consist of `https://` this must be removed when adding to Transdrone.
+**IP or hostname:** Here, you need to add your hostname, which can be found in the Ultra.cc Control panel under Transmission and will include your username like below it may consist of `https://` this must be removed when adding to Transdrone.
 
 `username.lw000.usbx.me`
 
-**Username:** Transmission username which can be found in the application tab of your control panel under show info for Transmission 
+**Username:** Transmission username which can be found in the application tab of your control panel under show info for Transmission
 
 **Password:** Transmission password which can be found in the application tab of your control panel under show info for Transmission under username (you may need to click the eyeball icon to reveal it)
 
@@ -111,6 +111,6 @@ Upon opening Transdrone, you will need to click the three dots on the top right-
 
 ![](https://i.imgur.com/yBqamRb.jpg)
 
-**Optional Settings:** Most of these options are non-applicable; however, you may want to check notifications when a new torrent is added, and torrent finished notifications depending on your preference 
+**Optional Settings:** Most of these options are non-applicable; however, you may want to check notifications when a new torrent is added, and torrent finished notifications depending on your preference
 
 ![](https://i.imgur.com/pdeoC2H.jpg)

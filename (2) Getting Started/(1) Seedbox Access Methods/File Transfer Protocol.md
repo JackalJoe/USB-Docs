@@ -4,7 +4,7 @@ This guide shows you on how to change your password and the general settings to 
 
 ***
 
-## Connecting to your Ultraseedbox Slot via FTP
+## Connecting to your Ultra.cc Slot via FTP
 ### Changing your SSH/FTP Password
 
 Before logging into your FTP Client, you should first set your own SSH/FTP password.
@@ -34,7 +34,7 @@ Before logging into your FTP Client, you should first set your own SSH/FTP passw
 
 ### FTPS vs. SFTP
 
-Ultraseedbox supports the File Transfer Protocol over SSL (FTPS) and SSH File Transfer Protocol (SFTP). These file transfer protocols provide secure file transfers between your slots and your PC. Also, both protocols do not count towards your allocated upload bandwidth.
+Ultra.cc supports the File Transfer Protocol over SSL (FTPS) and SSH File Transfer Protocol (SFTP). These file transfer protocols provide secure file transfers between your slots and your PC. Also, both protocols do not count towards your allocated upload bandwidth.
 
 **File Transfer Protocol over SSL (FTPS)**
 
@@ -306,7 +306,7 @@ Generating RSA private key, 1024 bit long modulus (2 primes)
 .................+++++
 e is 65537 (0x010001)
 Signature ok
-subject=C = NL, ST = NH, L = Amsterdam, O = Ultraseedbox, CN = lw816.usbx.me
+subject=C = NL, ST = NH, L = Amsterdam, O = Ultra.cc, CN = lw816.usbx.me
 Getting Private key
 Starting ProFTPD...
 Downloading Scripts...
@@ -362,14 +362,14 @@ Select an option:
     # Limit everything
     DenyAll
 </Limit>
- 
+
 <Directory /home12/usbdocs/files>
     # Allow everyone inside this folder
     <Limit ALL>
         AllowAll
     </Limit>
 </Directory>
- 
+
 <Directory /home12/usbdocs/files/test1>
     # Allow "test1" inside this folder and all other users will be denied
     <Limit ALL>
@@ -396,7 +396,7 @@ This largely depends on the response of the FTP server. Here are some of the com
 
 **Response: - 530 Non-anonymous sessions must use encryption.**
 
-Plain FTP is not supported at Ultraseedbox. You must connect over the following:
+Plain FTP is not supported at Ultra.cc. You must connect over the following:
 
 * Explicit TLS over port 21
 * Explicit Auth SSL over port 21
@@ -471,13 +471,13 @@ netsh int tcp set global autotuninglevel=normal
 
 Another cause of this is the use of VPNs. There are chances that the VPN is throttling your speeds, so make sure you disable your VPN connection whenever you download your files from your slot.
 
-Another possible reason is that your disk has very high IO utilization. To check, run this command in your shell and pay attention to the last column named **%util**. 
+Another possible reason is that your disk has very high IO utilization. To check, run this command in your shell and pay attention to the last column named **%util**.
 
 ```ssh
 iostat -xk 2 $(findmnt -T ~ | awk 'END {print $2}')
 ```
 
-If this is 100%, the disk you’re in is entirely saturated, affecting your apps’ performance. You may need to send a ticket to our support system so the Ultraseedbox team can investigate.
+If this is 100%, the disk you’re in is entirely saturated, affecting your apps’ performance. You may need to send a ticket to our support system so the Ultra.cc team can investigate.
 
 **I need plain FTP. Is there any way to use it?**
 
@@ -489,7 +489,7 @@ Please see this help document for the installation of userland ProFTPD [here.](h
 
 Then, once you finished installing and setting up roFTPD, you will need to edit `~/.config/proftpd/proftpd.conf` and change **TLSRequired on** to **TLSRequired off** using a text editor.
 
-After that, run `systemctl --user restart proftpd` to reflect the changes in Userland ProFTPD. 
+After that, run `systemctl --user restart proftpd` to reflect the changes in Userland ProFTPD.
 
 Logging in with the username/password combo you created during the install will now be unencrypted.
 

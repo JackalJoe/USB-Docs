@@ -1,5 +1,5 @@
 ::: danger
-Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing any NZB client to download directly to (or worse try to download and unpack) on your cloud storage using Rclone Mount will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+Please make yourself aware of the Ultra.cc Fair Usage Policy. Directly pointing any NZB client to download directly to (or worse try to download and unpack) on your cloud storage using Rclone Mount will create extreme strain on your slot's disk and _WILL_ cause a 24 hour ban on accessing your cloud storage repeatedly. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
 :::
 
 **NZBGet** is a binary downloader written in C++, which downloads files from Usenet based on the information given in nzb-files. It is designed with performance in mind to achieve maximum download speed by using very little system resources. Some of the features are:

@@ -33,8 +33,8 @@ settings tab.
 | NZBget Details (NON SSL) | Value                                                                                                                                                                                                   |
 |:--------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | NZBGet Host              | Servername.usbx.me                                                                                                                                                                                      |
-| Port                     | Port taken from Ultraseedbox Control Panel                                                                                                                                                              |
-| Username                 | Username taken from Ultraseedbox Control Panel                                                                                                                                                          |
+| Port                     | Port taken from Ultra.cc Control Panel                                                                                                                                                              |
+| Username                 | Username taken from Ultra.cc Control Panel                                                                                                                                                          |
 | Password                 | Password you set during install of NZBget                                                                                                                                                               |
 | Category                 | You may need to set a new Category in NZBget for this to do so access NZBget WebUI and go to settings \>\> Categories \>\> Scroll to bottom add new \>\> save changes \>\> restart NZBget when prompted |
 | Priority                 | This can be left at Default                                                                                                                                                                             |
@@ -44,8 +44,8 @@ settings tab.
 | Sabnzbd Details (NON SSL)                | Value                                                                                                                            |
 |:------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------:|
 | Sabnzbd Host                             | Servername.usbx.me                                                                                                               |
-| Port                                     | Port taken from Ultraseedbox Control Panel                                                                                       |
-| Username                                 | Username taken from Ultraseedbox Control Panel                                                                                   |
+| Port                                     | Port taken from Ultra.cc Control Panel                                                                                       |
+| Username                                 | Username taken from Ultra.cc Control Panel                                                                                   |
 | Password                                 | Password you set during install of Sabnzbd                                                                                       |
 | Category                                 | You may need to set a new Category in Sabnzbd for this to do so access Sabnzbd WebUI and go to Config (Cog Icon) \>\> Categories |
 | Priority                                 | This can be left at Default                                                                                                      |
@@ -61,8 +61,8 @@ settings tab.
 |:---------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | Minimum \# of seeders     | Set as at least 1                                                                                                                                                                                                            |
 | Deluge Host               | Servername.usbx.me                                                                                                                                                                                                           |
-| Daemon Port               | Port taken from Ultraseedbox Control Panel                                                                                                                                                                                   |
-| Username                  | Username taken from Ultraseedbox Control Panel                                                                                                                                                                               |
+| Daemon Port               | Port taken from Ultra.cc Control Panel                                                                                                                                                                                   |
+| Username                  | Username taken from Ultra.cc Control Panel                                                                                                                                                                               |
 | Daemon Password           | Password you set during install of Deluge                                                                                                                                                                                    |
 | Label                     | You may need to set a new Label in Deluge for this to do so access Deluge WebUI and go to Preferences plugin's then enable Label plugin this will bring up label in the left hand panel right click this to add a new label. |
 | Deluge Download Path/Move | This can be left blank and Deluge will use the default Download Directory                                                                                                                                                    |
@@ -73,8 +73,8 @@ settings tab.
 |:-----------------------------:|:------------------------------------------:|
 | Minimum \# of seeders       | Set as at least 1                        |
 | rTorrent Host               | https://Username.Servername.usbx.me      |
-| rTorrent User               | Username taken from Ultraseedbox Control |
-| rTorrent Pass               | Password taken from Ultraseedbox Control |
+| rTorrent User               | Username taken from Ultra.cc Control |
+| rTorrent Pass               | Password taken from Ultra.cc Control |
 | rTorrent label              | Can be left blank                        |
 | rTorrent Directory          | Leave blank                              |
 | rTorrent RPC                | /RPC2                                    |

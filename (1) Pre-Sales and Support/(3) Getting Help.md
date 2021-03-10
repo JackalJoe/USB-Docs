@@ -1,8 +1,8 @@
-Here we list the various ways of getting support from Ultraseedbox!
+Here we list the various ways of getting support from Ultra.cc!
 
 ***
 
-## UltraSeedbox Docs
+## Ultra.cc Docs
 
 ## Community Discord Support
 

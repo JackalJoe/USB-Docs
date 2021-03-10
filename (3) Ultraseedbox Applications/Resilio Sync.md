@@ -1,5 +1,5 @@
 ::: danger
-Please make yourself aware of the Ultraseedbox Fair Usage Policy. Directly pointing Resilio Sync to sync your cloud storage will create extreme strain on your slot's disk and could cause a 24 hour ban on accessing your cloud storage. Please Consider Rsync or Rclone with a reasonable limit set on speed. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
+Please make yourself aware of the Ultra.cc Fair Usage Policy. Directly pointing Resilio Sync to sync your cloud storage will create extreme strain on your slot's disk and could cause a 24 hour ban on accessing your cloud storage. Please Consider Rsync or Rclone with a reasonable limit set on speed. It is _your_ responsibility to ensure usage is within acceptable limits. Ignorance is not an excuse.
 :::
 
 **Resilio Sync** (formerly BitTorrent Sync) is a proprietary peer-to-peer file synchronization and sharing tool. It can securely sync files between devices on a local network, or between remote devices over the Internet via a modified version of the BitTorrent protocol. Major features are the following:
@@ -16,7 +16,7 @@ Resilio Sync has some paid features, which has been listed below:
 * Free version only has One Synchronization Mode (Synced) and can only sync standard folders.
 * Advance folder sync is a Pro feature.
 * Free has No local sync ability
-  * You cannot sync Folder A to Folder B if both folders are on your Ultraseedbox Slot
+  * You cannot sync Folder A to Folder B if both folders are on your Ultra.cc Slot
 * You cannot change permissions once set in the free version you would have to recreate the sync folder from scratch.
 * Free cannot perform selective sync everything inside a selected folder will be synced and a filter cannot be applied
 
@@ -36,16 +36,16 @@ Resilio Sync is counted towards your upload allocation.
 
 In this section, we'll be setting up Resilio Sync for the first time. For this guide, we'll assume you want to setup a folder on your seedbox as your "synced folder", which will be synced automatically to your devices.
 
-### Setting Up Resilio Sync on your Ultraseedbox Slot
+### Setting Up Resilio Sync on your Ultra.cc Slot
 
-After Installation of Resilio Sync via the Ultraseedbox Control Panel, Upon first opening the Web interface you will be presented with this page:
+After Installation of Resilio Sync via the Ultra.cc Control Panel, Upon first opening the Web interface you will be presented with this page:
 
 ![](https://i.imgur.com/4ZmTnQ0.jpg)
 
 You will need to enter the following:
 
 * A **username** of your choosing
-  * This does not have to be the same as your Ultraseedbox username
+  * This does not have to be the same as your Ultra.cc username
 * A **password** of your choosing.
 
 
@@ -59,7 +59,7 @@ Upon completion of the previous steps you will be immediately prompted to input 
 
 ### Adding your First Folder
 
-Before Syncing any file from your Ultraseedbox to another Device, you must tell Resilio what folders need to be included.
+Before Syncing any file from your Ultra.cc to another Device, you must tell Resilio what folders need to be included.
 
 ![](https://i.imgur.com/If7NUuZ.jpg)
 
@@ -105,7 +105,7 @@ This can be used to connect the folder to your mobile devices.
 
 ![](https://i.imgur.com/buAlwjj.jpg)
 
-Go to Preferences -> General. The only option you need to set here is **File download location**. Tt is used if you want to pull data from a client to your Ultraseedbox Server. USB recommends logging into your slot and creating a new clean folder for your downloads and setting it in the above options.
+Go to Preferences -> General. The only option you need to set here is **File download location**. Tt is used if you want to pull data from a client to your Ultra.cc Server. USB recommends logging into your slot and creating a new clean folder for your downloads and setting it in the above options.
 
 On SSH, do the following commands:
 

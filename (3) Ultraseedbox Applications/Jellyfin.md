@@ -33,7 +33,7 @@ The initial setup is all performed using the setup wizard so the process is rela
 * Choose the Content-type. Here, we will be using TV Shows
   * Set a name that you want.
     * It'll default to TV Shows and we will be leaving the default in this guide
-* The default folder for TV Shows on your UltraSeedbox server is `homexx/username/media/TV`
+* The default folder for TV Shows on your Ultra.cc server is `homexx/username/media/TV`
 * The rest of the settings are optional. You may wish to change some dependent on your personal preferences however they are not necessary and therefore will not be covered in this guide.
 
 * Once this is done, select the Ok button.
@@ -52,7 +52,7 @@ Click the plus once more to set up your Movies library
 ![](https://docs.usbx.me/uploads/images/gallery/2019-11/Wizard-6.PNG)
 
 * Here, you can configure Remote Access.
-* Leave the settings on this page to the default settings. It will work automatically with the preconfigured UltraSeedbox reverse proxy.
+* Leave the settings on this page to the default settings. It will work automatically with the preconfigured Ultra.cc reverse proxy.
 
 ![](https://docs.usbx.me/uploads/images/gallery/2019-11/Wizard-7.PNG)
 

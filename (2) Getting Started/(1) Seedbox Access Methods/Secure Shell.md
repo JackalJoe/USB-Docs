@@ -315,11 +315,11 @@ kbguides@lw902:~$
 
 ## PuTTYgen
 
-This method works for Windows users only. 
+This method works for Windows users only.
 
 ### Creating Key Pairs Using PuTTYgen
 
-* Open up PuTTYgen. You'll be greeted with this window. 
+* Open up PuTTYgen. You'll be greeted with this window.
 
 ![](https://docs.usbx.me/uploads/images/gallery/2019-10/image2019-8-8_19-42-17%5B1%5D.png)
 
@@ -400,7 +400,7 @@ kbguides@lw950:~$ chmod -R go= ~/.ssh
 
 ## Basic SSH Commands and USB-specific CLI Commands
 
-The terminal is your gateway to the inner workings of your UltraSeedbox slot. It is essentially a remote computer running Linux, and when you SSH into it you are connecting to that computer's terminal.
+The terminal is your gateway to the inner workings of your Ultra.cc slot. It is essentially a remote computer running Linux, and when you SSH into it you are connecting to that computer's terminal.
 
 A terminal is a powerful tool where you can execute written commands to perform many simple or even very complicated tasks. This guide will help you understand a few simple commands to get you started in navigating and making use of the Linux terminal, it can also serve as a cheat sheet later down the track if you need to recall anything you may have forgotten.
 
@@ -448,7 +448,7 @@ The rm command stands for _remove_, it is used to delete files or directories yo
 
 For any commands you need to find more information on you can use the command `man [command]`. This displays a manual page for the specified command.
 
-### UltraSeedbox Specific Commands
+### Ultra.cc Specific Commands
 
 #### Application Management
 
@@ -466,7 +466,7 @@ To change the running state of an application we use `app-[appname] [start|stop|
 
 ##### Checking Used Space
 
-To display your folder structure and space taken by individual  files the `ncdu -x` command is included in every Ultraseedbox slot. After a short scan largest items are displayed top and size is in descending order
+To display your folder structure and space taken by individual  files the `ncdu -x` command is included in every Ultra.cc slot. After a short scan largest items are displayed top and size is in descending order
 
 ##### Further Info
 

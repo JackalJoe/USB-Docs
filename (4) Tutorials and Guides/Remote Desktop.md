@@ -1,5 +1,5 @@
 ::: info
-VNC and x2go Access are being phased out on Ultraseedbox's new plans. This page will still be up for clients on legacy plans.
+VNC and x2go Access are being phased out on Ultra.cc new plans. This page will still be up for clients on legacy plans.
 :::
 
 ## VNC
@@ -39,7 +39,7 @@ usbdocs@lw701:~$ vnc-restart coolpassword 1920x1080
 Warning: password truncated to the length of 8.
 VNC server started on port: 5914
     connect to:   lw701.ultraseedbox.com:5914    or    46.166.184.34:5914
-usbdocs@lw701:~$ 
+usbdocs@lw701:~$
 ```
 
 ### Downloading a VNC Client
