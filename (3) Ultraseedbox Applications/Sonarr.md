@@ -230,7 +230,7 @@ If they report other values, then use a text editor on `config.xml` and change t
 
 ### Remote Path Mapping
 
-In this guide, we'll be setting up Sonarr/Radarr to communicate to plex so that a plex scan occurs finding only the new downloads. This guide assumes the following:
+In this guide, we'll be setting up Sonarr/Radarr to use the remote path mapping to enable instantaneous Media management and limit disk Input/Output. This guide assumes the following:
 
 •	You have a working Sonarr/Radarr
 
