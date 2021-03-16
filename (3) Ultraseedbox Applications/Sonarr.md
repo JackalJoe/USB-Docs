@@ -279,7 +279,7 @@ This will display a path like this
 
 `/home3/usbdocs/Stuff/Local/Downloads/usenet/Sonarr`
 For Radarr
-`/home3/usbdocs//Stuff/Local/Downloads/usenet/Radarr`
+`/home3/usbdocs/Stuff/Local/Downloads/usenet/Radarr`
 Add these Categories to NZBget by navigating to the web UI, Click Settings at the top of the page and then Categories on the left hand side
 
 ![](https://i.imgur.com/eTp97BL.png)
