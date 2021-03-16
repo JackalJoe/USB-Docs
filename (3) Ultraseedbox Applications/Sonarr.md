@@ -388,11 +388,11 @@ Scroll all the way down where you see Remote Path Mappings and click on the plus
 
 `Host: lwxxx.usbx.me/username.lwxxx.usbx.me (Must be the same one as your download client)`
 
-`Remote Path: /home3/usbdocs/Stuff/Local/Downloads/usenet/Sonarr (Or Radarr) (Path where torrent client is pointed)`
+`Remote Path: /home3/usbdocs/Stuff/Local/Downloads/usenet/Sonarr (Or Radarr at the end of the path) (Path where torrent client is pointed)`
 
-`Local Path: /home3/usbdocs/MergerFS/Downloads/usenet/Sonarr (path where Sonarr will look for downloads)`
+`Local Path: /home3/usbdocs/MergerFS/Downloads/usenet/Sonarr (path where Sonarr/Radarr will look for downloads)`
 
-The finished results will look something like this, You only have to add the paths relevent to your use case if you do not use NZB's there is no need for the second path.
+The finished results will look something like this, You only have to add the paths relevant to your use case if you do not use NZB's there is no need for the second path.
 
 ![](https://i.imgur.com/ktABhbU.png)
 
