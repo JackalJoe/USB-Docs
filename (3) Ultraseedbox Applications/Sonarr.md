@@ -375,11 +375,26 @@ Go to Settings => Download Clients
 
 Scroll all the way down where you see Remote Path Mappings and click on the plus sign as pictured here.
 ![](https://i.imgur.com/VVXsBSj.png)
+
+#### Torrents
+
 `Host: lwxxx.usbx.me/username.lwxxx.usbx.me (Must be the same one as your download client)`
 
 `Remote Path:/home3/usbdocs/Stuff/Local/Downloads/torrents/Deluge (Path where torrent client is pointed)`
 
 `Local Path:/home3/usbdocs/MergerFS/Downloads/ (path where Sonarr will look for downloads)`
+
+#### NZBdownloads
+
+`Host: lwxxx.usbx.me/username.lwxxx.usbx.me (Must be the same one as your download client)`
+
+`Remote Path: /home3/usbdocs/Stuff/Local/Downloads/usenet/Sonarr (Or Radarr) (Path where torrent client is pointed)`
+
+`Local Path: /home3/usbdocs/MergerFS/Downloads/usenet/Sonarr (path where Sonarr will look for downloads)`
+
+The finished results will look something like this, You only have to add the paths relevent to your use case if you do not use NZB's there is no need for the second path.
+
+![](https://i.imgur.com/ktABhbU.png)
 
 Enable Hardlinking in Media Management as pictured here:
 ![](https://i.imgur.com/aGrCGQV.png)
