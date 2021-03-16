@@ -244,10 +244,13 @@ Deluge/Torrent Clients
 `mkdir -p ~/Stuff/Local/Downloads/torrents/Deluge/`
 This could be changed at the end to rutorrent transmission or any other client you may be using
 Login via SSH to confirm your full download path.
-`cd ~/Stuff/Local/Downloads/ torrents/Deluge `
+
+`cd ~/Stuff/Local/Downloads/torrents/Deluge `
+
 `pwd`
+
 This will display a path like this
-`/home3/usbdocs/Stuff/Local/Downloads/ torrents/Deluge`
+`/home3/usbdocs/Stuff/Local/Downloads/torrents/Deluge`
 
 Proceed to set your Torrent Client to the same download path as you’ve just created.
 
@@ -340,7 +343,7 @@ Type=simple
 
 ExecStart=/home6/usbdocs/bin/rclone move /home6/usbdocs/Stuff/Local/ gdrive: \
     --config=/home6/kbguides/.config/rclone/rclone.conf \
-    --exclude "Downloads/**"
+    --exclude "Downloads/**" \
     --drive-chunk-size 8M \
     --tpslimit 1 \
     --drive-acknowledge-abuse=true \
@@ -369,8 +372,10 @@ Go to Settings => Download Clients
 Scroll all the way down where you see Remote Path Mappings and click on the plus sign as pictured here.
 ![](https://i.imgur.com/VVXsBSj.png)
 `Host: lwxxx.usbx.me/username.lwxxx.usbx.me (Must be the same one as your download client)`
-`Remote Path: homexx/username/Stuff/Local/Downloads/ (Path where torrent client is pointed)`
-`Local Path: homexx/username/MergerFS/Downloads/ (path where Sonarr will look for downloads)`
+
+`Remote Path:/home3/usbdocs/Stuff/Local/Downloads/torrents/Deluge (Path where torrent client is pointed)`
+
+`Local Path:/home3/usbdocs/MergerFS/Downloads/ (path where Sonarr will look for downloads)`
 
 Enable Hardlinking in Media Management as pictured here:
 ![](https://i.imgur.com/aGrCGQV.png)
