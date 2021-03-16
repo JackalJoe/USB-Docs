@@ -1,4 +1,4 @@
-**Sonarr** is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+ **Sonarr** is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
 
 Major features include:
 
@@ -227,6 +227,157 @@ If they report other values, then use a text editor on `config.xml` and change t
 ***
 
 ## Extra Guides
+
+### Remote Path Mapping
+
+In this guide, we'll be setting up Sonarr/Radarr to communicate to plex so that a plex scan occurs finding only the new downloads. This guide assumes the following:
+•	You have a working Sonarr/Radarr
+•	You have a working Download client installed and running on your Ultra.cc Slot, that is connected to sonar/radarr
+•	Have MergerFS Mount setup and working correctly
+•	Have the rclone upload script included in the docs up and running.
+
+#### Create Folder Structure
+Both Sonarr and Radarr offer an option called remote path mapping. Think of this as a shortcut between a local path in this case your Ultra.cc Slot and a Remote path where downloads are stored for processing, this could be another server or a cloud mount, In our case we will be using a MergerFS mount as our remote path, this has the effect of instantaneous media management.
+So, the first steps are to create a download folder, we will create a Folder for both Torrent downloads and Usenet downloads
+Deluge/Torrent Clients
+
+`mkdir -p ~/Stuff/Local/Downloads/torrents/Deluge/`
+This could be changed at the end to rutorrent transmission or any other client you may be using
+Login via SSH to confirm your full download path.
+`cd ~/Stuff/Local/Downloads/ torrents/Deluge `
+`pwd`
+This will display a path like this
+`/home3/usbdocs/Stuff/Local/Downloads/ torrents/Deluge`
+
+Proceed to set your Torrent Client to the same download path as you’ve just created.
+
+
+![](https://i.imgur.com/RO4Ng1K.png)
+
+ensure your download client is linked to your sonar/radarr with similar settings to these
+![](https://i.imgur.com/sPHGddj.png)
+![](https://i.imgur.com/0azOBxx.png)
+
+#### NZB Downloaders
+
+Now lets make one for NZBdownloads in this case NZBget
+
+`mkdir -p  ~/Stuff/Local/Downloads/usenet/Sonarr`
+
+
+`mkdir -p  ~/Stuff/Local/Downloads/usenet/Radarr`
+
+NZB downloaders work a little differently so your need to make Categories for both sonarr and radarr  and point them to the respective folders like so
+
+Login via SSH to confirm your full download path.
+`cd ~/Stuff/Local/Downloads/usenet/Sonarr`
+`pwd`
+This will display a path like this
+
+`/home3/usbdocs/Stuff/Local/Downloads/usenet/Sonarr`
+For Radarr
+`/home3/usbdocs//Stuff/Local/Downloads/usenet/Radarr`
+Add these Categories to NZBget by navigating to the web UI, Click Settings at the top of the page and then Categories on the left hand side
+
+![](https://i.imgur.com/eTp97BL.png)
+
+![](https://i.imgur.com/0QMxbxB.png)
+
+Be sure to scroll to the bottom and save.
+
+#### Edit Upload script/Systemd/Bash Upload
+
+
+We now need to tell rclone to ignore our Downloads and only touch Stuff/Local. Be sure to follow this or your end up being api banned for seeding from the cloud drive.
+
+Original script can be found here:
+https://raw.githubusercontent.com/ultraseedbox/UltraSeedbox-Scripts/master/MergerFS-Rclone/Upload%20Scripts/rclone-upload.sh
+
+![](https://i.imgur.com/Gs6wIEq.png)
+
+You need to add the `--exclude "Downloads/**"` flag
+The script will now look like this:
+
+![](https://i.imgur.com/jn7LbXJ.png)
+
+#### Systemd
+
+```
+[Unit]
+Description=RClone Uploader
+
+[Service]
+Type=simple
+
+ExecStart=/home6/usbdocs/bin/rclone move /home6/usbdocs/Stuff/Local/ gdrive: \
+    --config=/home6/kbguides/.config/rclone/rclone.conf \
+    --drive-chunk-size 8M \
+    --tpslimit 1 \
+    --drive-acknowledge-abuse=true \
+    -vvv \
+    --delete-empty-src-dirs \
+    --fast-list \
+    --bwlimit=2M \
+    --use-mmap \
+    --transfers=1 \
+    --checkers=1 \
+    --drive-stop-on-upload-limit \
+    --log-file /home6/kbguides/scripts/rclone-uploader.log
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+```
+
+Just like the script above you can simply add `--exclude "Downloads/**"` under `--config`
+
+```
+[Unit]
+Description=RClone Uploader
+
+[Service]
+Type=simple
+
+ExecStart=/home6/usbdocs/bin/rclone move /home6/usbdocs/Stuff/Local/ gdrive: \
+    --config=/home6/kbguides/.config/rclone/rclone.conf \
+    --exclude "Downloads/**"
+    --drive-chunk-size 8M \
+    --tpslimit 1 \
+    --drive-acknowledge-abuse=true \
+    -vvv \
+    --delete-empty-src-dirs \
+    --fast-list \
+    --bwlimit=2M \
+    --use-mmap \
+    --transfers=1 \
+    --checkers=1 \
+    --drive-stop-on-upload-limit \
+    --log-file /home6/kbguides/scripts/rclone-uploader.log
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+```
+
+save the file and run `systemctl --user daemon-reload` then `systemctl --user restart --now rclone-uploader.service`
+
+
+### Configuring Sonarr/Radarr to use the remote mapping functions
+
+Go to Settings => Download Clients
+
+Scroll all the way down where you see Remote Path Mappings and click on the plus sign as pictured here.
+![](https://i.imgur.com/VVXsBSj.png)
+`Host: lwxxx.usbx.me/username.lwxxx.usbx.me (Must be the same one as your download client)`
+`Remote Path: homexx/username/Stuff/Local/Downloads/ (Path where torrent client is pointed)`
+`Local Path: homexx/username/MergerFS/Downloads/ (path where Sonarr will look for downloads)`
+
+Enable Hardlinking in Media Management as pictured here:
+![](https://i.imgur.com/aGrCGQV.png)
+
+
+
+
 ### Backing Up and Restoring Sonarr
 
 In this section, we'll be showing you how to backup and restore Sonarr v3.
