@@ -231,9 +231,13 @@ If they report other values, then use a text editor on `config.xml` and change t
 ### Remote Path Mapping
 
 In this guide, we'll be setting up Sonarr/Radarr to communicate to plex so that a plex scan occurs finding only the new downloads. This guide assumes the following:
+
 •	You have a working Sonarr/Radarr
+
 •	You have a working Download client installed and running on your Ultra.cc Slot, that is connected to sonar/radarr
+
 •	Have MergerFS Mount setup and working correctly
+
 •	Have the rclone upload script included in the docs up and running.
 
 #### Create Folder Structure
