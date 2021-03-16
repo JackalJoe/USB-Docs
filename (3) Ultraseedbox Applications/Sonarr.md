@@ -20,7 +20,7 @@ You can view the application's repo here: [https://github.com/Sonarr/Sonarr](htt
 
 ***
 
-## Intiial Setup
+## Initial Setup
 
 In this section, we’ll be setting up Sonarr for the first time. This guide assumes that this is your first time installing Sonarr and you'll be storing your media locally, saving to `~/media`. We'll be doing the following:
 
@@ -298,10 +298,10 @@ https://raw.githubusercontent.com/ultraseedbox/UltraSeedbox-Scripts/master/Merge
 
 ![](https://i.imgur.com/Gs6wIEq.png)
 
-You need to add the `--exclude "Downloads/**"` flag
+You need to add the `--exclude "Downloads/**" \` flag
 The script will now look like this:
 
-![](https://i.imgur.com/jn7LbXJ.png)
+![](https://i.imgur.com/VjrgnKY.png)
 
 #### Systemd
 
@@ -332,7 +332,7 @@ Restart=on-failure
 WantedBy=default.target
 ```
 
-Just like the script above you can simply add `--exclude "Downloads/**"` under `--config`
+Just like the script above you can simply add `--exclude "Downloads/**" \` under `--config`
 
 ```
 [Unit]
